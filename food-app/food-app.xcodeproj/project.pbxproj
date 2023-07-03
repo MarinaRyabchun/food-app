@@ -14,6 +14,19 @@
 		E8E9B2A02A52BC9A0031EE96 /* food_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B29F2A52BC9A0031EE96 /* food_appTests.swift */; };
 		E8E9B2AA2A52BC9A0031EE96 /* food_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2A92A52BC9A0031EE96 /* food_appUITests.swift */; };
 		E8E9B2AC2A52BC9A0031EE96 /* food_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2AB2A52BC9A0031EE96 /* food_appUITestsLaunchTests.swift */; };
+		E8E9B2C42A52C4710031EE96 /* CategoryesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2C32A52C4710031EE96 /* CategoryesView.swift */; };
+		E8E9B2C62A52C51C0031EE96 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2C52A52C51C0031EE96 /* DishesView.swift */; };
+		E8E9B2C82A52C5480031EE96 /* DetailDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2C72A52C5480031EE96 /* DetailDishView.swift */; };
+		E8E9B2CA2A52C55D0031EE96 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2C92A52C55D0031EE96 /* SearchView.swift */; };
+		E8E9B2CC2A52C56D0031EE96 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2CB2A52C56D0031EE96 /* BasketView.swift */; };
+		E8E9B2CE2A52C5810031EE96 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2CD2A52C5810031EE96 /* AccountView.swift */; };
+		E8E9B2D02A52C6CA0031EE96 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2CF2A52C6CA0031EE96 /* TabBarView.swift */; };
+		E8E9B2D22A52C8160031EE96 /* ImagesAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E9B2D12A52C8160031EE96 /* ImagesAssets.xcassets */; };
+		E8E9B2D42A52C82A0031EE96 /* ColorsAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E9B2D32A52C82A0031EE96 /* ColorsAssets.xcassets */; };
+		E8E9B2D62A52D9B50031EE96 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8E9B2D52A52D9B50031EE96 /* SF-Pro-Display-Regular.otf */; };
+		E8E9B2D92A52DC0C0031EE96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2D82A52DC0C0031EE96 /* Constants.swift */; };
+		E8E9B2DE2A52DE440031EE96 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E8E9B2DD2A52DE440031EE96 /* SF-Pro-Display-Medium.otf */; };
+		E8E9B2E02A52EE720031EE96 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2DF2A52EE720031EE96 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +57,20 @@
 		E8E9B2A52A52BC9A0031EE96 /* food-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "food-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E9B2A92A52BC9A0031EE96 /* food_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food_appUITests.swift; sourceTree = "<group>"; };
 		E8E9B2AB2A52BC9A0031EE96 /* food_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E8E9B2C32A52C4710031EE96 /* CategoryesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryesView.swift; sourceTree = "<group>"; };
+		E8E9B2C52A52C51C0031EE96 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
+		E8E9B2C72A52C5480031EE96 /* DetailDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDishView.swift; sourceTree = "<group>"; };
+		E8E9B2C92A52C55D0031EE96 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E8E9B2CB2A52C56D0031EE96 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		E8E9B2CD2A52C5810031EE96 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		E8E9B2CF2A52C6CA0031EE96 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E8E9B2D12A52C8160031EE96 /* ImagesAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImagesAssets.xcassets; sourceTree = "<group>"; };
+		E8E9B2D32A52C82A0031EE96 /* ColorsAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorsAssets.xcassets; sourceTree = "<group>"; };
+		E8E9B2D52A52D9B50031EE96 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		E8E9B2D72A52DA660031EE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8E9B2D82A52DC0C0031EE96 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8E9B2DD2A52DE440031EE96 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		E8E9B2DF2A52EE720031EE96 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +121,10 @@
 		E8E9B28D2A52BC980031EE96 /* food-app */ = {
 			isa = PBXGroup;
 			children = (
-				E8E9B28E2A52BC980031EE96 /* food_appApp.swift */,
-				E8E9B2902A52BC980031EE96 /* ContentView.swift */,
-				E8E9B2922A52BC9A0031EE96 /* Assets.xcassets */,
+				E8E9B2BB2A52C0B80031EE96 /* Application */,
+				E8E9B2B82A52C0290031EE96 /* Modules */,
+				E8E9B2B92A52C0780031EE96 /* Services */,
+				E8E9B2BA2A52C08F0031EE96 /* Resources */,
 				E8E9B2942A52BC9A0031EE96 /* Preview Content */,
 			);
 			path = "food-app";
@@ -125,6 +153,131 @@
 				E8E9B2AB2A52BC9A0031EE96 /* food_appUITestsLaunchTests.swift */,
 			);
 			path = "food-appUITests";
+			sourceTree = "<group>";
+		};
+		E8E9B2B82A52C0290031EE96 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2CF2A52C6CA0031EE96 /* TabBarView.swift */,
+				E8E9B2BC2A52C1E50031EE96 /* MainModule */,
+				E8E9B2C12A52C3DD0031EE96 /* SearchModule */,
+				E8E9B2C02A52C3C10031EE96 /* BasketModule */,
+				E8E9B2C22A52C3EC0031EE96 /* AccountModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E8E9B2B92A52C0780031EE96 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E8E9B2BA2A52C08F0031EE96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2D72A52DA660031EE96 /* Info.plist */,
+				E8E9B2DC2A52DC280031EE96 /* Constants */,
+				E8E9B2DB2A52DC210031EE96 /* Fonts */,
+				E8E9B2DA2A52DC170031EE96 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8E9B2BB2A52C0B80031EE96 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B28E2A52BC980031EE96 /* food_appApp.swift */,
+				E8E9B2902A52BC980031EE96 /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E8E9B2BC2A52C1E50031EE96 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2BD2A52C2210031EE96 /* Categoryes */,
+				E8E9B2BE2A52C2BC0031EE96 /* Dishes */,
+				E8E9B2BF2A52C36A0031EE96 /* DetailDish */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		E8E9B2BD2A52C2210031EE96 /* Categoryes */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2C32A52C4710031EE96 /* CategoryesView.swift */,
+				E8E9B2DF2A52EE720031EE96 /* ButtonView.swift */,
+			);
+			path = Categoryes;
+			sourceTree = "<group>";
+		};
+		E8E9B2BE2A52C2BC0031EE96 /* Dishes */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2C52A52C51C0031EE96 /* DishesView.swift */,
+			);
+			path = Dishes;
+			sourceTree = "<group>";
+		};
+		E8E9B2BF2A52C36A0031EE96 /* DetailDish */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2C72A52C5480031EE96 /* DetailDishView.swift */,
+			);
+			path = DetailDish;
+			sourceTree = "<group>";
+		};
+		E8E9B2C02A52C3C10031EE96 /* BasketModule */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2CB2A52C56D0031EE96 /* BasketView.swift */,
+			);
+			path = BasketModule;
+			sourceTree = "<group>";
+		};
+		E8E9B2C12A52C3DD0031EE96 /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2C92A52C55D0031EE96 /* SearchView.swift */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		E8E9B2C22A52C3EC0031EE96 /* AccountModule */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2CD2A52C5810031EE96 /* AccountView.swift */,
+			);
+			path = AccountModule;
+			sourceTree = "<group>";
+		};
+		E8E9B2DA2A52DC170031EE96 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2D12A52C8160031EE96 /* ImagesAssets.xcassets */,
+				E8E9B2D32A52C82A0031EE96 /* ColorsAssets.xcassets */,
+				E8E9B2922A52BC9A0031EE96 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E8E9B2DB2A52DC210031EE96 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2DD2A52DE440031EE96 /* SF-Pro-Display-Medium.otf */,
+				E8E9B2D52A52D9B50031EE96 /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E8E9B2DC2A52DC280031EE96 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9B2D82A52DC0C0031EE96 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +384,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E9B2DE2A52DE440031EE96 /* SF-Pro-Display-Medium.otf in Resources */,
+				E8E9B2D22A52C8160031EE96 /* ImagesAssets.xcassets in Resources */,
 				E8E9B2962A52BC9A0031EE96 /* Preview Assets.xcassets in Resources */,
+				E8E9B2D42A52C82A0031EE96 /* ColorsAssets.xcassets in Resources */,
+				E8E9B2D62A52D9B50031EE96 /* SF-Pro-Display-Regular.otf in Resources */,
 				E8E9B2932A52BC9A0031EE96 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +414,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E9B2D02A52C6CA0031EE96 /* TabBarView.swift in Sources */,
+				E8E9B2C82A52C5480031EE96 /* DetailDishView.swift in Sources */,
 				E8E9B2912A52BC980031EE96 /* ContentView.swift in Sources */,
+				E8E9B2C42A52C4710031EE96 /* CategoryesView.swift in Sources */,
+				E8E9B2C62A52C51C0031EE96 /* DishesView.swift in Sources */,
+				E8E9B2D92A52DC0C0031EE96 /* Constants.swift in Sources */,
+				E8E9B2E02A52EE720031EE96 /* ButtonView.swift in Sources */,
+				E8E9B2CE2A52C5810031EE96 /* AccountView.swift in Sources */,
+				E8E9B2CA2A52C55D0031EE96 /* SearchView.swift in Sources */,
+				E8E9B2CC2A52C56D0031EE96 /* BasketView.swift in Sources */,
 				E8E9B28F2A52BC980031EE96 /* food_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +586,7 @@
 				DEVELOPMENT_TEAM = KMUNA49CD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "food-app/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +616,7 @@
 				DEVELOPMENT_TEAM = KMUNA49CD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "food-app/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
