@@ -6,49 +6,50 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum Constants{
     enum Colors{
-        static var white: UIColor?{
-            UIColor(named: "White")
+        static var white: Color?{
+            Color("White")
         }
-        static var black: UIColor?{
-            UIColor(named: "Black")
+        static var black: Color?{
+            Color("Black")
         }
-        static var black40: UIColor?{
-            UIColor(named: "Black40")
+        static var black40: Color?{
+            Color("Black40")
         }
-        static var black50: UIColor?{
-            UIColor(named: "Black50")
+        static var black50: Color?{
+            Color("Black50")
         }
-        static var black65: UIColor?{
-            UIColor(named: "Black65")
+        static var black65: Color?{
+            Color("Black65")
         }
-        static var accent: UIColor?{
-            UIColor(named: "Accent")
+        static var accent: Color?{
+            Color("Accent")
         }
-        static var tab: UIColor?{
-            UIColor(named: "GrayTabBar")
+        static var tab: Color?{
+            Color("GrayTabBar")
         }
     }
     enum Fonts{
-        static var headline: UIFont?{
-            UIFont(name: "SF-Pro-Display-Medium", size: 20)
+        static var headline: Font?{
+            Font.custom("SFProDisplay-Medium", size: 20)
         }
-        static var headline1: UIFont?{
-            UIFont(name: "SF-Pro-Display-Medium", size: 18)
+        static var headline1: Font?{
+            Font.custom("SFProDisplay-Medium", size: 18)
         }
-        static var headline2: UIFont?{
-            UIFont(name: "SF-Pro-Display-Medium", size: 16)
+        static var headline2: Font?{
+            Font.custom("SFProDisplay-Medium", size: 16)
         }
-        static var subHead1: UIFont?{
-            UIFont(name: "SF-Pro-Display-Regular", size: 14)
+        static var subHead1: Font?{
+            Font.custom("SFProDisplay-Regular", size: 14)
         }
-        static var tab: UIFont?{
-            UIFont(name: "SF-Pro-Display-Medium", size: 10)
+        static var tab: Font?{
+            Font.custom("SFProDisplay-Medium", size: 10)
         }
-        static var mainBody: UIFont?{
-            UIFont(name: "SF-Pro-Display-Regular", size: 14)
+        static var mainBody: Font?{
+            Font.custom("SFProDisplay-Regular", size: 14)
         }
     }
     enum Image {

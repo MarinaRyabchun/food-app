@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State var tabSelection = 0
+    @State var tabSelection = 1
     
     var body: some View {
         TabView(selection: $tabSelection) {
-            CategoryesView()
+            CategoriesView()
                 .tabItem {
                     Label("Главная", image: Constants.Image.mainTabIcon)
                 }
@@ -33,6 +33,7 @@ struct TabBarView: View {
                 }
                 .tag(3)
         }
+        .tint(Constants.Colors.accent)
     }
 }
 
