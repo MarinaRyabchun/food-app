@@ -11,13 +11,15 @@ struct CategoriesView: View {
     @StateObject var viewModel = CategoriesViewModel()
     
     var body: some View {
-        VStack(spacing: 8) {
-            ForEach(viewModel.categories, id: \.id) { category in
-                Button(action: {
-
-                }, label: {
-                    CategoryRow(category: category)
-                })
+        ScrollView(.vertical) {
+            VStack(spacing: 8) {
+                ForEach(viewModel.categories, id: \.id) { category in
+                    Button(action: {
+                        
+                    }, label: {
+                        CategoryRow(category: category)
+                    })
+                }
             }
         }
         .onAppear {

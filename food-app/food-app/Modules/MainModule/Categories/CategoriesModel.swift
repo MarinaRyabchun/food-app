@@ -12,7 +12,6 @@ struct Categories: Codable{
 }
 
 struct Category: Codable, Identifiable {
-//    var id = UUID()
     let id: Int?
     let name: String?
     let image_url: String?

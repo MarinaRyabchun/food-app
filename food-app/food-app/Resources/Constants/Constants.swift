@@ -13,6 +13,9 @@ enum Constants{
         static var white: Color?{
             Color("White")
         }
+        static var background: Color?{
+            Color("Background")
+        }
         static var black: Color?{
             Color("Black")
         }
@@ -41,9 +44,6 @@ enum Constants{
         }
         static var headline2: Font?{
             Font.custom("SFProDisplay-Medium", size: 16)
-        }
-        static var subHead1: Font?{
-            Font.custom("SFProDisplay-Regular", size: 14)
         }
         static var tab: Font?{
             Font.custom("SFProDisplay-Medium", size: 10)

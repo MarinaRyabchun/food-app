@@ -33,6 +33,10 @@
 		E8E9B2EF2A5331560031EE96 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2EE2A5331560031EE96 /* APIService.swift */; };
 		E8E9B2F12A5331740031EE96 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2F02A5331740031EE96 /* APIServiceProtocol.swift */; };
 		E8E9B2F32A5332040031EE96 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2F22A5332040031EE96 /* APIError.swift */; };
+		E8E9B2F52A53F4B50031EE96 /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2F42A53F4B50031EE96 /* DishesModel.swift */; };
+		E8E9B2F72A53F4C70031EE96 /* DishesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2F62A53F4C70031EE96 /* DishesViewModel.swift */; };
+		E8E9B2F92A53F4EA0031EE96 /* DishRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2F82A53F4EA0031EE96 /* DishRow.swift */; };
+		E8E9B2FB2A53F88F0031EE96 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2FA2A53F88F0031EE96 /* TagButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		E8E9B2EE2A5331560031EE96 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E8E9B2F02A5331740031EE96 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
 		E8E9B2F22A5332040031EE96 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E8E9B2F42A53F4B50031EE96 /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
+		E8E9B2F62A53F4C70031EE96 /* DishesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesViewModel.swift; sourceTree = "<group>"; };
+		E8E9B2F82A53F4EA0031EE96 /* DishRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishRow.swift; sourceTree = "<group>"; };
+		E8E9B2FA2A53F88F0031EE96 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +242,11 @@
 		E8E9B2BE2A52C2BC0031EE96 /* Dishes */ = {
 			isa = PBXGroup;
 			children = (
+				E8E9B2F42A53F4B50031EE96 /* DishesModel.swift */,
+				E8E9B2F62A53F4C70031EE96 /* DishesViewModel.swift */,
 				E8E9B2C52A52C51C0031EE96 /* DishesView.swift */,
+				E8E9B2F82A53F4EA0031EE96 /* DishRow.swift */,
+				E8E9B2FA2A53F88F0031EE96 /* TagButton.swift */,
 			);
 			path = Dishes;
 			sourceTree = "<group>";
@@ -443,6 +455,8 @@
 				E8E9B2F12A5331740031EE96 /* APIServiceProtocol.swift in Sources */,
 				E8E9B2E42A52F28E0031EE96 /* CategoriesModel.swift in Sources */,
 				E8E9B2EF2A5331560031EE96 /* APIService.swift in Sources */,
+				E8E9B2F52A53F4B50031EE96 /* DishesModel.swift in Sources */,
+				E8E9B2F92A53F4EA0031EE96 /* DishRow.swift in Sources */,
 				E8E9B2F32A5332040031EE96 /* APIError.swift in Sources */,
 				E8E9B2D02A52C6CA0031EE96 /* TabBarView.swift in Sources */,
 				E8E9B2C82A52C5480031EE96 /* DetailDishView.swift in Sources */,
@@ -451,9 +465,11 @@
 				E8E9B2C62A52C51C0031EE96 /* DishesView.swift in Sources */,
 				E8E9B2D92A52DC0C0031EE96 /* Constants.swift in Sources */,
 				E8E9B2E02A52EE720031EE96 /* CategoryRow.swift in Sources */,
+				E8E9B2F72A53F4C70031EE96 /* DishesViewModel.swift in Sources */,
 				E8E9B2ED2A5327040031EE96 /* String+Extension.swift in Sources */,
 				E8E9B2CE2A52C5810031EE96 /* AccountView.swift in Sources */,
 				E8E9B2CA2A52C55D0031EE96 /* SearchView.swift in Sources */,
+				E8E9B2FB2A53F88F0031EE96 /* TagButton.swift in Sources */,
 				E8E9B2CC2A52C56D0031EE96 /* BasketView.swift in Sources */,
 				E8E9B2E62A52F2A50031EE96 /* CategoriesViewModel.swift in Sources */,
 				E8E9B28F2A52BC980031EE96 /* food_appApp.swift in Sources */,

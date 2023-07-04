@@ -35,6 +35,7 @@ enum APIError: Error, CustomStringConvertible {
             return error?.localizedDescription ?? "url session error"
         case .parsing(let error):
             return "parsing error \(error?.localizedDescription ?? "")"
+//            return "\(error)"
         case .badResponse(statusCode: let statusCode):
             return "bad response with status code \(statusCode)"
         }

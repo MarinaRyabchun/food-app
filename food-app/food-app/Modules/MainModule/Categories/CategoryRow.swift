@@ -32,7 +32,7 @@ struct CategoryRow: View {
                     }
                 }
             }else {
-                Color.gray.frame(width: imageWidth, height: imageHeight)
+                Constants.Colors.background.frame(width: imageWidth, height: imageHeight)
             }
             Text(category.name?.splitWords() ?? "Category")
                 .font(Constants.Fonts.headline)
