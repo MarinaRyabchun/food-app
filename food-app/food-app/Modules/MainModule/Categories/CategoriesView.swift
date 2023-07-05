@@ -11,14 +11,27 @@ struct CategoriesView: View {
     @StateObject var viewModel = CategoriesViewModel()
     
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(spacing: 8) {
-                ForEach(viewModel.categories, id: \.id) { category in
-                    Button(action: {
-                        
-                    }, label: {
-                        CategoryRow(category: category)
-                    })
+        NavigationStack {
+            VStack {
+                ScrollView(.vertical) {
+                    VStack(spacing: 8) {
+                        ForEach(viewModel.categories, id: \.id) { category in
+                            Button(action: {
+                                
+                            }, label: {
+                                CategoryRow(category: category)
+                            })
+                        }
+                    }
+                }
+            }
+            .padding(.top, 8)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    GeoAndDateView()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    AccountButton()
                 }
             }
         }

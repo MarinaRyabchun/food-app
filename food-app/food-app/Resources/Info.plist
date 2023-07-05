@@ -7,5 +7,11 @@
 		<string>SFProDisplay-Regular.otf</string>
 		<string>SFProDisplay-Medium.otf</string>
 	</array>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>...</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>...</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>...</string>
 </dict>
 </plist>

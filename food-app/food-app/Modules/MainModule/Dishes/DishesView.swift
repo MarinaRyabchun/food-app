@@ -14,6 +14,7 @@ struct DishesView: View {
     var columns: [GridItem] = Array(repeating: .init(.fixed(109), alignment: .top), count: 3)
     
     var body: some View {
+        NavigationStack {
             VStack{
                 HStack(spacing: 8) {
                     ForEach(viewModel.tags, id: \.self) { tag in
@@ -21,15 +22,22 @@ struct DishesView: View {
                     }
                 }
                 ScrollView{
-                LazyVGrid (
-                    columns: columns,
-                    alignment: .center,
-                    spacing: 8,
-                    pinnedViews: [.sectionHeaders, .sectionFooters]
-                ) {
-                    ForEach(viewModel.dishes, id: \.id) { dish in
-                        DishRow(dish: dish)
+                    LazyVGrid (
+                        columns: columns,
+                        alignment: .center,
+                        spacing: 8,
+                        pinnedViews: [.sectionHeaders, .sectionFooters]
+                    ) {
+                        ForEach(viewModel.dishes, id: \.id) { dish in
+                            DishRow(dish: dish)
+                        }
                     }
+                }
+            }
+            .padding(.top, 8)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    AccountButton()
                 }
             }
         }

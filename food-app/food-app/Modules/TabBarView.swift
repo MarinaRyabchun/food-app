@@ -27,7 +27,8 @@ struct TabBarView: View {
                     Label("Корзина", image: Constants.Image.basketTabIcon)
                 }
                 .tag(2)
-            AccountView()
+//            AccountView()
+            DishesView()
                 .tabItem {
                     Label("Аккаунт", image: Constants.Image.accountTabIcon)
                 }

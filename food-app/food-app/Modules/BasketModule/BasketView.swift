@@ -13,25 +13,38 @@ struct BasketView: View {
     @State private var price = 0
     
     var body: some View {
-        VStack {
-            List {
-//                ForEach(viewModel.dishes, id: \.id) { dish in
-//                    BasketRow(dish: dish)
-//                }
-            }
-            Spacer()
-            
-            Button("Оплатить \(price) ₽") {
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    List {
+        //                ForEach(viewModel.dishes, id: \.id) { dish in
+        //                    BasketRow(dish: dish)
+        //                }
+                    }
+                }
+                Spacer()
                 
+                Button("Оплатить \(price) ₽") {
+                    
+                }
+                .frame(width: 343, height: 48)
+                .background(Constants.Colors.accent)
+                .foregroundColor(Constants.Colors.white)
+                .font(Constants.Fonts.headline2)
+                .cornerRadius(10)
+                .padding(.top, 10)
+                
+                Spacer().frame(height: 16)
             }
-            .frame(width: 343, height: 48)
-            .background(Constants.Colors.accent)
-            .foregroundColor(Constants.Colors.white)
-            .font(Constants.Fonts.headline2)
-            .cornerRadius(10)
-            .padding(.top, 10)
-            
-            Spacer().frame(height: 16)
+            .padding(.top, 8)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    GeoAndDateView()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    AccountButton()
+                }
+            }
         }
     }
 }

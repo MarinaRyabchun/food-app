@@ -11,7 +11,9 @@
 		E883F5FF2A557464001ACA5D /* BasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5FE2A557464001ACA5D /* BasketViewModel.swift */; };
 		E883F6012A5574B4001ACA5D /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6002A5574B4001ACA5D /* BasketRow.swift */; };
 		E883F6032A5586B0001ACA5D /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6022A5586B0001ACA5D /* CustomStepper.swift */; };
-		E883F6072A55A168001ACA5D /* AccountPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6062A55A168001ACA5D /* AccountPhoto.swift */; };
+		E883F6072A55A168001ACA5D /* AccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6062A55A168001ACA5D /* AccountButton.swift */; };
+		E883F6092A55B04F001ACA5D /* GeoDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6082A55B04F001ACA5D /* GeoDateView.swift */; };
+		E883F60B2A55B5B9001ACA5D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F60A2A55B5B9001ACA5D /* LocationManager.swift */; };
 		E8E9B28F2A52BC980031EE96 /* food_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B28E2A52BC980031EE96 /* food_appApp.swift */; };
 		E8E9B2912A52BC980031EE96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2902A52BC980031EE96 /* ContentView.swift */; };
 		E8E9B2932A52BC9A0031EE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E9B2922A52BC9A0031EE96 /* Assets.xcassets */; };
@@ -66,7 +68,9 @@
 		E883F5FE2A557464001ACA5D /* BasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewModel.swift; sourceTree = "<group>"; };
 		E883F6002A5574B4001ACA5D /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
 		E883F6022A5586B0001ACA5D /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
-		E883F6062A55A168001ACA5D /* AccountPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPhoto.swift; sourceTree = "<group>"; };
+		E883F6062A55A168001ACA5D /* AccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountButton.swift; sourceTree = "<group>"; };
+		E883F6082A55B04F001ACA5D /* GeoDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDateView.swift; sourceTree = "<group>"; };
+		E883F60A2A55B5B9001ACA5D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E8E9B28B2A52BC980031EE96 /* food-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E9B28E2A52BC980031EE96 /* food_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food_appApp.swift; sourceTree = "<group>"; };
 		E8E9B2902A52BC980031EE96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				E8E9B2F02A5331740031EE96 /* APIServiceProtocol.swift */,
 				E8E9B2EE2A5331560031EE96 /* APIService.swift */,
 				E8E9B2F22A5332040031EE96 /* APIError.swift */,
+				E883F60A2A55B5B9001ACA5D /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,7 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				E8E9B2CD2A52C5810031EE96 /* AccountView.swift */,
-				E883F6062A55A168001ACA5D /* AccountPhoto.swift */,
+				E883F6062A55A168001ACA5D /* AccountButton.swift */,
+				E883F6082A55B04F001ACA5D /* GeoDateView.swift */,
 			);
 			path = AccountModule;
 			sourceTree = "<group>";
@@ -469,7 +475,7 @@
 			files = (
 				E8E9B2F12A5331740031EE96 /* APIServiceProtocol.swift in Sources */,
 				E8E9B2E42A52F28E0031EE96 /* CategoriesModel.swift in Sources */,
-				E883F6072A55A168001ACA5D /* AccountPhoto.swift in Sources */,
+				E883F6072A55A168001ACA5D /* AccountButton.swift in Sources */,
 				E8E9B2EF2A5331560031EE96 /* APIService.swift in Sources */,
 				E8E9B2F52A53F4B50031EE96 /* DishesModel.swift in Sources */,
 				E883F6012A5574B4001ACA5D /* BasketRow.swift in Sources */,
@@ -478,6 +484,7 @@
 				E8E9B2D02A52C6CA0031EE96 /* TabBarView.swift in Sources */,
 				E8E9B2C82A52C5480031EE96 /* DetailDishView.swift in Sources */,
 				E8E9B2912A52BC980031EE96 /* ContentView.swift in Sources */,
+				E883F6092A55B04F001ACA5D /* GeoDateView.swift in Sources */,
 				E8E9B2C42A52C4710031EE96 /* CategoriesView.swift in Sources */,
 				E8E9B2C62A52C51C0031EE96 /* DishesView.swift in Sources */,
 				E8E9B2D92A52DC0C0031EE96 /* Constants.swift in Sources */,
@@ -490,6 +497,7 @@
 				E8E9B2CA2A52C55D0031EE96 /* SearchView.swift in Sources */,
 				E8E9B2FB2A53F88F0031EE96 /* TagButton.swift in Sources */,
 				E883F5FF2A557464001ACA5D /* BasketViewModel.swift in Sources */,
+				E883F60B2A55B5B9001ACA5D /* LocationManager.swift in Sources */,
 				E8E9B2CC2A52C56D0031EE96 /* BasketView.swift in Sources */,
 				E8E9B2E62A52F2A50031EE96 /* CategoriesViewModel.swift in Sources */,
 				E8E9B28F2A52BC980031EE96 /* food_appApp.swift in Sources */,
