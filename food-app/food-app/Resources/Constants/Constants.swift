@@ -34,6 +34,9 @@ enum Constants{
         static var tab: Color?{
             Color("GrayTabBar")
         }
+        static var stepper: Color?{
+            Color("Stepper")
+        }
     }
     enum Fonts{
         static var headline: Font?{
@@ -50,6 +53,9 @@ enum Constants{
         }
         static var mainBody: Font?{
             Font.custom("SFProDisplay-Regular", size: 14)
+        }
+        static var stepperValue: Font?{
+            Font.custom("SFProDisplay-Medium", size: 14)
         }
     }
     enum Image {

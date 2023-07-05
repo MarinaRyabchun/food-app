@@ -1,21 +1,24 @@
 //
-//  ProductView.swift
+//  BasketRow.swift
 //  food-app
 //
-//  Created by Марина Рябчун on 03.07.2023.
+//  Created by Марина Рябчун on 05.07.2023.
 //
 
 import SwiftUI
 
-struct DetailDishView: View {
+struct BasketRow: View {
     var dish: Dish
-    let imageSize: CGFloat = 200
+    let contentSize: CGFloat = 62
+    let imageSize: CGFloat = 50
+    
+    @State private var count = 1
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
+        HStack(alignment: .center, spacing: 0) {
             ZStack(alignment: .center) {
-                RoundedRectangle(cornerRadius: 10)
-                    .frame(width: 311, height: 232)
+                RoundedRectangle(cornerRadius: 6)
+                    .frame(width: contentSize, height: contentSize)
                 .foregroundColor(Constants.Colors.background)
                 if dish.image_url != nil {
                     AsyncImage(url: URL(string: dish.image_url!)) { phase in
@@ -36,61 +39,31 @@ struct DetailDishView: View {
                 }else {
                     Constants.Colors.background.frame(width: imageSize, height: imageSize)
                 }
+            }
+            VStack(alignment: .leading) {
+                Text(dish.name ?? "Dish")
+                    .font(Constants.Fonts.mainBody)
+                    .foregroundColor(Constants.Colors.black)
                 HStack {
-                    Button {
-                        
-                    } label: {
-                        Image(Constants.Image.heartIcon)
-                            .padding(10)
-                            .background(.white, in: RoundedRectangle(cornerRadius: 8))
-                            .frame(width: 40, height: 40)
-                    }
-                    Button {
-                        
-                    } label: {
-                        Image(Constants.Image.cancelIcon)
-                            .padding(10)
-                            .background(.white, in: RoundedRectangle(cornerRadius: 8))
-                            .frame(width: 40, height: 40)
-                    }
+                    Text(String(dish.price ?? 0) + "₽")
+                        .font(Constants.Fonts.mainBody)
+                        .foregroundColor(Constants.Colors.black)
+                    Text(String(dish.weight ?? 0) + "г")
+                        .font(Constants.Fonts.mainBody)
+                        .foregroundColor(Constants.Colors.black40)
                 }
-                .offset(x: 103, y: -88)
             }
-            Text(dish.name ?? "Dish")
-                .font(Constants.Fonts.headline2)
-                .foregroundColor(Constants.Colors.black)
-            HStack {
-                Text(String(dish.price ?? 0) + "₽")
-                    .font(Constants.Fonts.mainBody)
-                    .foregroundColor(Constants.Colors.black)
-                Text(String(dish.weight ?? 0) + "г")
-                    .font(Constants.Fonts.mainBody)
-                    .foregroundColor(Constants.Colors.black40)
-            }
-            ScrollView {
-                Text(dish.description ?? "Dish")
-                    .font(Constants.Fonts.mainBody)
-                    .foregroundColor(Constants.Colors.black)
-                    .frame(width: 311)
-            }
-            Button("Добавить в корзину") {
-                
-            }
-            .frame(width: 311, height: 48)
-            .background(Constants.Colors.accent)
-            .foregroundColor(Constants.Colors.white)
-            .cornerRadius(10)
-            .padding(.top, 10)
+            .frame(minWidth: 0, maxWidth: 119)
+            Spacer()
+            CustomStepper(count: $count)
         }
-        .padding(16)
-        .background(.white, in: RoundedRectangle(cornerRadius: 15))
-        .frame(width: 343, height: 446)
+        .padding(.horizontal, 16)
     }
 }
 
-struct DetailDishView_Previews: PreviewProvider {
+struct BasketRow_Previews: PreviewProvider {
     static var previews: some View {
-        DetailDishView(dish: Dish(id: 1,
+        BasketRow(dish: Dish(id: 1,
                            name: "Рис с овощами и зеленью",
                            price: 799,
                            weight: 560,

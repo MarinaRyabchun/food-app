@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E883F5FD2A556474001ACA5D /* DetailDishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5FC2A556474001ACA5D /* DetailDishViewModel.swift */; };
+		E883F5FF2A557464001ACA5D /* BasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F5FE2A557464001ACA5D /* BasketViewModel.swift */; };
+		E883F6012A5574B4001ACA5D /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6002A5574B4001ACA5D /* BasketRow.swift */; };
+		E883F6032A5586B0001ACA5D /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6022A5586B0001ACA5D /* CustomStepper.swift */; };
+		E883F6072A55A168001ACA5D /* AccountPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883F6062A55A168001ACA5D /* AccountPhoto.swift */; };
 		E8E9B28F2A52BC980031EE96 /* food_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B28E2A52BC980031EE96 /* food_appApp.swift */; };
 		E8E9B2912A52BC980031EE96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9B2902A52BC980031EE96 /* ContentView.swift */; };
 		E8E9B2932A52BC9A0031EE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E9B2922A52BC9A0031EE96 /* Assets.xcassets */; };
@@ -57,6 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E883F5FC2A556474001ACA5D /* DetailDishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDishViewModel.swift; sourceTree = "<group>"; };
+		E883F5FE2A557464001ACA5D /* BasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewModel.swift; sourceTree = "<group>"; };
+		E883F6002A5574B4001ACA5D /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
+		E883F6022A5586B0001ACA5D /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
+		E883F6062A55A168001ACA5D /* AccountPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPhoto.swift; sourceTree = "<group>"; };
 		E8E9B28B2A52BC980031EE96 /* food-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E9B28E2A52BC980031EE96 /* food_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food_appApp.swift; sourceTree = "<group>"; };
 		E8E9B2902A52BC980031EE96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -255,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				E8E9B2C72A52C5480031EE96 /* DetailDishView.swift */,
+				E883F5FC2A556474001ACA5D /* DetailDishViewModel.swift */,
 			);
 			path = DetailDish;
 			sourceTree = "<group>";
@@ -262,7 +273,10 @@
 		E8E9B2C02A52C3C10031EE96 /* BasketModule */ = {
 			isa = PBXGroup;
 			children = (
+				E883F5FE2A557464001ACA5D /* BasketViewModel.swift */,
 				E8E9B2CB2A52C56D0031EE96 /* BasketView.swift */,
+				E883F6002A5574B4001ACA5D /* BasketRow.swift */,
+				E883F6022A5586B0001ACA5D /* CustomStepper.swift */,
 			);
 			path = BasketModule;
 			sourceTree = "<group>";
@@ -279,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				E8E9B2CD2A52C5810031EE96 /* AccountView.swift */,
+				E883F6062A55A168001ACA5D /* AccountPhoto.swift */,
 			);
 			path = AccountModule;
 			sourceTree = "<group>";
@@ -454,8 +469,10 @@
 			files = (
 				E8E9B2F12A5331740031EE96 /* APIServiceProtocol.swift in Sources */,
 				E8E9B2E42A52F28E0031EE96 /* CategoriesModel.swift in Sources */,
+				E883F6072A55A168001ACA5D /* AccountPhoto.swift in Sources */,
 				E8E9B2EF2A5331560031EE96 /* APIService.swift in Sources */,
 				E8E9B2F52A53F4B50031EE96 /* DishesModel.swift in Sources */,
+				E883F6012A5574B4001ACA5D /* BasketRow.swift in Sources */,
 				E8E9B2F92A53F4EA0031EE96 /* DishRow.swift in Sources */,
 				E8E9B2F32A5332040031EE96 /* APIError.swift in Sources */,
 				E8E9B2D02A52C6CA0031EE96 /* TabBarView.swift in Sources */,
@@ -465,11 +482,14 @@
 				E8E9B2C62A52C51C0031EE96 /* DishesView.swift in Sources */,
 				E8E9B2D92A52DC0C0031EE96 /* Constants.swift in Sources */,
 				E8E9B2E02A52EE720031EE96 /* CategoryRow.swift in Sources */,
+				E883F5FD2A556474001ACA5D /* DetailDishViewModel.swift in Sources */,
+				E883F6032A5586B0001ACA5D /* CustomStepper.swift in Sources */,
 				E8E9B2F72A53F4C70031EE96 /* DishesViewModel.swift in Sources */,
 				E8E9B2ED2A5327040031EE96 /* String+Extension.swift in Sources */,
 				E8E9B2CE2A52C5810031EE96 /* AccountView.swift in Sources */,
 				E8E9B2CA2A52C55D0031EE96 /* SearchView.swift in Sources */,
 				E8E9B2FB2A53F88F0031EE96 /* TagButton.swift in Sources */,
+				E883F5FF2A557464001ACA5D /* BasketViewModel.swift in Sources */,
 				E8E9B2CC2A52C56D0031EE96 /* BasketView.swift in Sources */,
 				E8E9B2E62A52F2A50031EE96 /* CategoriesViewModel.swift in Sources */,
 				E8E9B28F2A52BC980031EE96 /* food_appApp.swift in Sources */,
