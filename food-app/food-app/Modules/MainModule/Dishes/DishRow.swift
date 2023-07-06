@@ -10,41 +10,45 @@ import SwiftUI
 struct DishRow: View {
     var dish: Dish
     let contentSize: CGFloat = 110
-    let imageSize: CGFloat = 83
+    let imageSize: CGFloat = 85
     
     var body: some View {
         VStack(alignment: .leading) {
-            ZStack(alignment: .center) {
-                RoundedRectangle(cornerRadius: 8)
-                    .frame(width: contentSize, height: contentSize)
-                .foregroundColor(Constants.Colors.background)
-                if dish.image_url != nil {
-                    AsyncImage(url: URL(string: dish.image_url!)) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .scaledToFit()
-                                .frame(width: imageSize, height: imageSize)
-                        } else if phase.error != nil {
-                            
-                            Text(phase.error?.localizedDescription ?? "error")
-                                .foregroundColor(Color.pink)
-                                .frame(width: imageSize, height: imageSize)
-                        } else {
-                            ProgressView()
-                                .frame(width: imageSize, height: imageSize)
+        Button {
+            
+        } label: {
+                ZStack(alignment: .center) {
+                    RoundedRectangle(cornerRadius: 8)
+                        .frame(width: contentSize, height: contentSize)
+                    .foregroundColor(Constants.Colors.background)
+                    if dish.image_url != nil {
+                        AsyncImage(url: URL(string: dish.image_url!)) { phase in
+                            if let image = phase.image {
+                                image.resizable()
+                                    .scaledToFit()
+                                    .frame(width: imageSize, height: imageSize)
+                            } else if phase.error != nil {
+                                
+                                Text(phase.error?.localizedDescription ?? "error")
+                                    .foregroundColor(Color.pink)
+                                    .frame(width: imageSize, height: imageSize)
+                            } else {
+                                ProgressView()
+                                    .frame(width: imageSize, height: imageSize)
+                            }
                         }
+                    }else {
+                        Constants.Colors.background.frame(width: imageSize, height: imageSize)
                     }
-                }else {
-                    Constants.Colors.background.frame(width: imageSize, height: imageSize)
                 }
+
             }
-            .padding(5)
-            Text(dish.name ?? "Dish")
-                .font(Constants.Fonts.mainBody)
-                .foregroundColor(Constants.Colors.black)
-                .multilineTextAlignment(.leading)
-                .frame(width: 109)
+        Text(dish.name ?? "Dish")
+            .font(Constants.Fonts.mainBody)
+            .foregroundColor(Constants.Colors.black)
+            .multilineTextAlignment(.leading)
         }
+        .frame(width: 109)
     }
 }
 

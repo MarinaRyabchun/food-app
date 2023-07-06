@@ -67,5 +67,6 @@ enum Constants{
         static let basketTabIcon = "BasketTabIcon"
         static let accountTabIcon = "AccountTabIcon"
         static let accountPhoto = "AccountPhoto"
+        static let leftBackButton = "LeftBackButton"
     }
 }

@@ -9,19 +9,14 @@ import SwiftUI
 
 struct CategoriesView: View {
     @StateObject var viewModel = CategoriesViewModel()
+    @State var selectedCategory: String?
     
     var body: some View {
         NavigationStack {
-            VStack {
-                ScrollView(.vertical) {
-                    VStack(spacing: 8) {
-                        ForEach(viewModel.categories, id: \.id) { category in
-                            Button(action: {
-                                
-                            }, label: {
-                                CategoryRow(category: category)
-                            })
-                        }
+            ScrollView {
+                VStack(spacing: 8) {
+                    ForEach(viewModel.categories, id: \.id) { category in
+                            CategoryRow(category: category, selectedCategory: $selectedCategory)
                     }
                 }
             }

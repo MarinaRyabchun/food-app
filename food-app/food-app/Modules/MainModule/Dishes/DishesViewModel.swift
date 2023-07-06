@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 class DishesViewModel: ObservableObject {
     
@@ -14,6 +14,7 @@ class DishesViewModel: ObservableObject {
     @Published var tags = ["Все меню", "С рыбой", "С рисом", "Салаты"]
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
+    @State var selectedCategory: String?
     
     let service: APIServiceProtocol
     
@@ -27,6 +28,7 @@ class DishesViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
         
+//      В URL мщжно будет добавить category, если API будет под каждую категорию.
         let url = URL(string: "https://run.mocky.io/v3/aba7ecaa-0a70-453b-b62d-0e326c859b3b")
         service.fetch(Dishes.self, url: url) { [unowned self] result in
             
@@ -45,7 +47,7 @@ class DishesViewModel: ObservableObject {
             }
         }
     }
-    
+//    метод для заполнения массива с тегами, если API будет под каждую категорию
     private func addTagsFromDishes(_ dishes: [Dish]) {
         for dish in dishes {
             if let dishTags = dish.tegs {

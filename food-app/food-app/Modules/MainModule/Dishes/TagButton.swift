@@ -7,27 +7,9 @@
 
 import SwiftUI
 
-//struct TagsSegmented: View {
-//    let title: String
-//    @State var selectedIndex: Int?
-//    
-//    var body: some View {
-//        Text(title)
-//            .font(Constants.Fonts.mainBody)
-//            .foregroundColor(Constants.Colors.black)
-//            .padding(.leading, 16)
-//            .padding(.trailing, 16)
-//            .padding(.top, 10)
-//            .padding(.bottom, 10)
-//            .background(Constants.Colors.background)
-//            .cornerRadius(10)
-//    }
-//}
-
 struct TagButton: View {
     var title: String
     @Binding var selectedTag: String
-//    var animation: Namespace.ID
     
     var body: some View {
         Button(action: {
