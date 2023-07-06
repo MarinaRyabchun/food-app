@@ -9,22 +9,20 @@ import SwiftUI
 
 struct BasketView: View {
     
-//    @StateObject var viewModel = DishesViewModel()
+    @StateObject var viewModel: BasketViewModel
     @State private var price = 0
     
     var body: some View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    List {
-        //                ForEach(viewModel.dishes, id: \.id) { dish in
-        //                    BasketRow(dish: dish)
-        //                }
+                    List(viewModel.positions) { position in
+                            BasketRow(position: position)
                     }
                 }
                 Spacer()
                 
-                Button("Оплатить \(price) ₽") {
+                Button("Оплатить \(viewModel.cost) ₽") {
                     
                 }
                 .frame(width: 343, height: 48)
@@ -51,6 +49,6 @@ struct BasketView: View {
 
 struct BasketView_Previews: PreviewProvider {
     static var previews: some View {
-        BasketView()
+        BasketView(viewModel: BasketViewModel.shared)
     }
 }

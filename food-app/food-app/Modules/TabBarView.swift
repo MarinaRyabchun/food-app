@@ -22,7 +22,7 @@ struct TabBarView: View {
                     Label("Поиск", image: Constants.Image.searchTabIcon)
                 }
                 .tag(1)
-            BasketView()
+            BasketView(viewModel: BasketViewModel.shared)
                 .tabItem {
                     Label("Корзина", image: Constants.Image.basketTabIcon)
                 }
