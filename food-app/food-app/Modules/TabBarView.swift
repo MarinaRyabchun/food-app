@@ -14,23 +14,27 @@ struct TabBarView: View {
         TabView(selection: $tabSelection) {
             CategoriesView()
                 .tabItem {
-                    Label("Главная", image: Constants.Image.mainTabIcon)
+                    TabItemView(image: Constants.Image.mainTabIcon,
+                                title: "Главная")
                 }
                 .tag(0)
             SearchView()
                 .tabItem {
-                    Label("Поиск", image: Constants.Image.searchTabIcon)
+                    TabItemView(image: Constants.Image.searchTabIcon,
+                                title: "Поиск")
                 }
                 .tag(1)
             BasketView(viewModel: BasketViewModel.shared)
                 .tabItem {
-                    Label("Корзина", image: Constants.Image.basketTabIcon)
+                    TabItemView(image: Constants.Image.basketTabIcon,
+                                title: "Корзина")
                 }
                 .tag(2)
 //            AccountView()
             DishesView()
                 .tabItem {
-                    Label("Аккаунт", image: Constants.Image.accountTabIcon)
+                    TabItemView(image: Constants.Image.accountTabIcon,
+                                title: "Аккаунт")
                 }
                 .tag(3)
         }
