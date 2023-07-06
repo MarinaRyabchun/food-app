@@ -17,25 +17,7 @@ struct DetailDishView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 311, height: 232)
                 .foregroundColor(Constants.Colors.background)
-                if viewModel.dish.image_url != nil {
-                    AsyncImage(url: URL(string: viewModel.dish.image_url!)) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .scaledToFit()
-                                .frame(width: imageSize, height: imageSize)
-                        } else if phase.error != nil {
-                            
-                            Text(phase.error?.localizedDescription ?? "error")
-                                .foregroundColor(Color.pink)
-                                .frame(width: imageSize, height: imageSize)
-                        } else {
-                            ProgressView()
-                                .frame(width: imageSize, height: imageSize)
-                        }
-                    }
-                }else {
-                    Constants.Colors.background.frame(width: imageSize, height: imageSize)
-                }
+                AsyncImageView(url: viewModel.dish.image_url, imageWidth: imageSize, imageHeight: imageSize)
                 HStack {
                     Button {
                         

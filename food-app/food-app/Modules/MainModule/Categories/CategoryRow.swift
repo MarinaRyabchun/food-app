@@ -19,26 +19,7 @@ struct CategoryRow: View {
             selectedCategory = category.name ?? ""
         } label: {
             ZStack(alignment: .topLeading) {
-                if category.image_url != nil {
-                    AsyncImage(url: URL(string: category.image_url!)) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .scaledToFill()
-                                .frame(width: imageWidth, height: imageHeight)
-                            
-                        } else if phase.error != nil {
-                            
-                            Text(phase.error?.localizedDescription ?? "error")
-                                .foregroundColor(Color.pink)
-                                .frame(width: imageWidth, height: imageHeight)
-                        } else {
-                            ProgressView()
-                                .frame(width: imageWidth, height: imageHeight)
-                        }
-                    }
-                }else {
-                    Constants.Colors.background.frame(width: imageWidth, height: imageHeight)
-                }
+                AsyncImageView(url: category.image_url, imageWidth: imageWidth, imageHeight: imageHeight)
                 Text(category.name?.splitWords() ?? "Category")
                     .font(Constants.Fonts.headline)
                     .foregroundColor(Constants.Colors.black)

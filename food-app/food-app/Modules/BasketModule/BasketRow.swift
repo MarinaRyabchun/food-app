@@ -20,25 +20,7 @@ struct BasketRow: View {
                 RoundedRectangle(cornerRadius: 6)
                     .frame(width: contentSize, height: contentSize)
                     .foregroundColor(Constants.Colors.background)
-                if position.dish.image_url != nil {
-                    AsyncImage(url: URL(string: position.dish.image_url!)) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .scaledToFit()
-                                .frame(width: imageSize, height: imageSize)
-                        } else if phase.error != nil {
-                            
-                            Text(phase.error?.localizedDescription ?? "error")
-                                .foregroundColor(Color.pink)
-                                .frame(width: imageSize, height: imageSize)
-                        } else {
-                            ProgressView()
-                                .frame(width: imageSize, height: imageSize)
-                        }
-                    }
-                }else {
-                    Constants.Colors.background.frame(width: imageSize, height: imageSize)
-                }
+                AsyncImageView(url: position.dish.image_url, imageWidth: imageSize, imageHeight: imageSize)
             }
             VStack(alignment: .leading) {
                 Text(position.dish.name ?? "Dish")

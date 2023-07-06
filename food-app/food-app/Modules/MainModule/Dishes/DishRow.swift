@@ -21,27 +21,8 @@ struct DishRow: View {
                     RoundedRectangle(cornerRadius: 8)
                         .frame(width: contentSize, height: contentSize)
                     .foregroundColor(Constants.Colors.background)
-                    if dish.image_url != nil {
-                        AsyncImage(url: URL(string: dish.image_url!)) { phase in
-                            if let image = phase.image {
-                                image.resizable()
-                                    .scaledToFit()
-                                    .frame(width: imageSize, height: imageSize)
-                            } else if phase.error != nil {
-                                
-                                Text(phase.error?.localizedDescription ?? "error")
-                                    .foregroundColor(Color.pink)
-                                    .frame(width: imageSize, height: imageSize)
-                            } else {
-                                ProgressView()
-                                    .frame(width: imageSize, height: imageSize)
-                            }
-                        }
-                    }else {
-                        Constants.Colors.background.frame(width: imageSize, height: imageSize)
-                    }
+                    AsyncImageView(url: dish.image_url, imageWidth: imageSize, imageHeight: imageSize)
                 }
-
             }
         Text(dish.name ?? "Dish")
             .font(Constants.Fonts.mainBody)

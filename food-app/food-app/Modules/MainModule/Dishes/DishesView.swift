@@ -58,12 +58,6 @@ struct DishesView: View {
                 }
             }
             .padding(.top, 8)
-//            .navigationTitle(selectedCategory ?? "")
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    AccountButton()
-//                }
-//            }
         }
         .onAppear {
             selectedTag = viewModel.tags[0]
