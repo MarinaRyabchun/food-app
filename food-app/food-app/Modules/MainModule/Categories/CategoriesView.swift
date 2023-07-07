@@ -9,13 +9,12 @@ import SwiftUI
 
 struct CategoriesView: View {
     @StateObject var viewModel = CategoriesViewModel()
-    @State var selectedCategory: String?
     
     var body: some View {
         ScrollView {
             VStack {
                 ForEach(viewModel.categories) { category in
-                    CategoryRow(category: category, selectedCategory: $selectedCategory)
+                    CategoryRow(category: category)
                 }
             }
             .padding(.top, 8)

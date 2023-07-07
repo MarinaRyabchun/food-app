@@ -6,28 +6,26 @@
 //
 
 import SwiftUI
-
 struct TabBarView: View {
     
     @StateObject var coordinator: Coordinator
     
     var body: some View {
         TabView(selection: $coordinator.tab) {
+
+
             NavigationStack(path: $coordinator.path) {
                 coordinator.build(page: .categories)
                     .navigationDestination(for: Page.self) { page in
                         coordinator.build(page: page)
                     }
-                    .fullScreenCover(item: $coordinator.fullScreenCover) { fullScreenCover in
-                        coordinator.build(fullScreenCover: fullScreenCover)
-                    }
             }
-                .tabItem {
-                    TabItemView(image: Constants.Image.mainTabIcon,
-                                title: "Главная")
-                }
-                .tag(Page.categories)
-            coordinator.build(page: .basket)
+            .tabItem {
+                TabItemView(image: Constants.Image.mainTabIcon,
+                            title: "Главная")
+            }
+            .tag(Page.categories)
+            coordinator.build(page: .search)
                 .tabItem {
                     TabItemView(image: Constants.Image.searchTabIcon,
                                 title: "Поиск")
@@ -50,9 +48,7 @@ struct TabBarView: View {
         .environmentObject(coordinator)
     }
 }
-
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView(coordinator: Coordinator())
-    }
-}
+    }}

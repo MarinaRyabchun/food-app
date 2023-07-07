@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class CategoriesViewModel: ObservableObject {
     
     @Published var categories = [Category]()
@@ -44,4 +43,3 @@ class CategoriesViewModel: ObservableObject {
         }
     }
 }
-

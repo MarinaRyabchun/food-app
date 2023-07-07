@@ -9,11 +9,12 @@ import SwiftUI
 
 struct DishesView: View {
     @EnvironmentObject private var coordinator: Coordinator
-    @StateObject var viewModel = DishesViewModel()
-    @State var selectedCategory: String?
+    @StateObject var viewModel: DishesViewModel
     @State var selectedTag = ""
+    @State var showPopup: Bool
     
-    var columns: [GridItem] = Array(repeating: .init(.fixed(109), alignment: .top), count: 3)
+    var columns: [GridItem] = Array(repeating: .init(.fixed(109),
+                                                     alignment: .top), count: 3)
     
     var filteredDishes: [Dish] {
         if selectedTag == "Все меню" {
@@ -24,41 +25,55 @@ struct DishesView: View {
     }
     
     var body: some View {
-            VStack{
-                HStack {
-                    Button {
-                        coordinator.pop()
-                    } label: {
-                        Image(Constants.Image.leftBackButton)
-                    }
-                    .padding(.leading, 16)
-                    Spacer()
-                    Text(selectedCategory ?? "Category")
-                        .font(Constants.Fonts.headline1)
-                    Spacer()
-                    AccountButton()
-                        .padding(.trailing, 16)
+        VStack{
+            HStack {
+                Button {
+                    coordinator.pop()
+                } label: {
+                    Image(Constants.Image.leftBackButton)
                 }
-                HStack(spacing: 8) {
-                    ForEach(viewModel.tags, id: \.self) { tag in
-                        TagButton(title: tag, selectedTag: $selectedTag)
-                    }
+                .padding(.leading, 16)
+                Spacer()
+                Text(viewModel.selectedCategory ?? "Category")
+                    .font(Constants.Fonts.headline1)
+                Spacer()
+                AccountButton()
+                    .padding(.trailing, 16)
+            }
+            HStack(spacing: 8) {
+                ForEach(viewModel.tags, id: \.self) { tag in
+                    TagButton(title: tag, selectedTag: $selectedTag)
                 }
-                ScrollView{
-                    LazyVGrid (
-                        columns: columns,
-                        alignment: .center,
-                        spacing: 8,
-                        pinnedViews: [.sectionHeaders, .sectionFooters]
-                    ) {
-                        ForEach(filteredDishes, id: \.id) { dish in
+            }
+            ScrollView {
+                LazyVGrid (
+                    columns: columns,
+                    alignment: .center,
+                    spacing: 8,
+                    pinnedViews: [.sectionHeaders, .sectionFooters]
+                ) {
+                    ForEach(filteredDishes, id: \.id) { dish in
+                        Button {
+                            viewModel.selectedDish = dish
+                            showPopup = true
+                        } label: {
                             DishRow(dish: dish)
                         }
                     }
                 }
             }
-            .navigationBarBackButtonHidden(true)
-            .padding(.top, 8)
+        }
+        .padding(.top, 8)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+        .popUp(show: $showPopup, content: {
+            ZStack {
+                DetailDishView(viewModel: DetailDishViewModel(dish: viewModel.selectedDish ?? Dish.example1()), isPresented: $showPopup)
+            }
+            .onTapGesture {
+                showPopup = false
+            }
+        })
         .onAppear {
             selectedTag = viewModel.tags[0]
             viewModel.fetchDishes()
@@ -68,6 +83,7 @@ struct DishesView: View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        DishesView(viewModel: DishesViewModel(service: APIService()))
+     @State var showPopup = false
+        DishesView(viewModel: DishesViewModel(service: APIService()), showPopup: showPopup)
     }
 }

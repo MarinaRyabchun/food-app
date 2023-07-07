@@ -9,8 +9,11 @@ import Foundation
 
 struct Categories: Codable{
     let сategories: [Category]
+    
+    static func example() -> Categories {
+        return Categories(сategories: [Category.example1()])
+    }
 }
-
 struct Category: Codable, Identifiable {
     let id: Int?
     let name: String?

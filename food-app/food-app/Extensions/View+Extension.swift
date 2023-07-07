@@ -15,4 +15,29 @@ extension View {
             UIView.setAnimationsEnabled(true) //<== Again enable animation for whole app
         }
     }
+    
+    func popUp<Content: View>(show: Binding<Bool>,@ViewBuilder content: @escaping () -> Content) -> some View {
+        
+        return self
+            .overlay {
+                if show.wrappedValue {
+                    GeometryReader { proxy in
+                        
+                        Color.black
+                            .opacity(0.4)
+                            .ignoresSafeArea(.all)
+                        
+                        
+                        let size = proxy.size
+                        
+                        NavigationView {
+                            content()
+                        }
+                        .frame(width: 343, height: 446)
+                        .cornerRadius(15)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
+                }
+            }
+    }
 }

@@ -8,9 +8,7 @@
 import SwiftUI
 
 public struct CustomStepper: View {
-
-    @Binding public var count: Int
-
+    @Binding var count: Int
     public var body: some View {
         HStack(spacing: 15) {
             Button {
@@ -40,10 +38,7 @@ public struct CustomStepper: View {
         .frame(minWidth: 99, minHeight: 32)
     }
 }
-
-
 // MARK: - Preview
-
 struct CustomStepper_Previews: PreviewProvider {
     static var previews: some View {
         @State var value = 1

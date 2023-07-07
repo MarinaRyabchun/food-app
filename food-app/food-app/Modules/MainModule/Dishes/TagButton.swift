@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct TagButton: View {
     var title: String
     @Binding var selectedTag: String
@@ -17,7 +16,7 @@ struct TagButton: View {
                 selectedTag = title
             }
         }, label: {
-                Text(title)
+            Text(title)
                 .font(Constants.Fonts.mainBody)
                 .foregroundColor(selectedTag == title ? Constants.Colors.white : Constants.Colors.black)
                 .padding(.horizontal, 16)
@@ -27,7 +26,6 @@ struct TagButton: View {
         })
     }
 }
-
 struct TagButton_Previews: PreviewProvider {
     static var previews: some View {
         @State var selectedTag = ""

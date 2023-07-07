@@ -12,7 +12,6 @@ class BasketViewModel: ObservableObject {
     static let shared = BasketViewModel()
     
     @Published var positions = [Position]()
-    @Published var count = 0
     
     var cost: Int {
         var sum = 0
@@ -23,10 +22,10 @@ class BasketViewModel: ObservableObject {
     }
     
     func addPosition(_ position: Position) {
-        self.positions.append(position)
+        if let existingPositionIndex = positions.firstIndex(where: { $0.dish.id == position.dish.id }) {
+            positions[existingPositionIndex].count += 1
+        } else {
+            positions.append(position)
+        }
     }
-
 }
-
-
-

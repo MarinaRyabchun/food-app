@@ -9,16 +9,15 @@ import SwiftUI
 
 struct CategoryRow: View {
     @EnvironmentObject private var coordinator: Coordinator
+    @StateObject var dishesViewModel = DishesViewModel()
     
     var category: Category
     let imageWidth: CGFloat = 343
     let imageHeight: CGFloat = 148
     
-    @Binding var selectedCategory: String?
-    
     var body: some View {
         Button {
-            selectedCategory = category.name ?? ""
+            dishesViewModel.selectedCategory = category.name
             coordinator.push(.dishes)
         } label: {
             ZStack(alignment: .topLeading) {
@@ -36,6 +35,6 @@ struct CategoryRow: View {
 struct CategoryRow_Previews: PreviewProvider {
     static var previews: some View {
         @State var selectedCategory: String? = ""
-        CategoryRow(category: Category.example1(), selectedCategory: $selectedCategory)
+        CategoryRow(category: Category.example1())
     }
 }

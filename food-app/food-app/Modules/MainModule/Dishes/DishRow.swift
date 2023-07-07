@@ -15,22 +15,16 @@ struct DishRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-        Button {
-            withoutAnimation {
-                coordinator.present(fullScreenCover: .detail, content: dish)
-            }
-        } label: {
-                ZStack(alignment: .center) {
-                    RoundedRectangle(cornerRadius: 8)
-                        .frame(width: contentSize, height: contentSize)
+            ZStack(alignment: .center) {
+                RoundedRectangle(cornerRadius: 8)
+                    .frame(width: contentSize, height: contentSize)
                     .foregroundColor(Constants.Colors.background)
-                    AsyncImageView(url: dish.image_url, imageWidth: imageSize, imageHeight: imageSize)
-                }
+                AsyncImageView(url: dish.image_url, imageWidth: imageSize, imageHeight: imageSize)
             }
-        Text(dish.name ?? "Dish")
-            .font(Constants.Fonts.mainBody)
-            .foregroundColor(Constants.Colors.black)
-            .multilineTextAlignment(.leading)
+            Text(dish.name ?? "Dish")
+                .font(Constants.Fonts.mainBody)
+                .foregroundColor(Constants.Colors.black)
+                .multilineTextAlignment(.leading)
         }
         .frame(width: 109)
     }
@@ -41,4 +35,3 @@ struct DishRow_Previews: PreviewProvider {
         DishRow(dish: Dish.example1())
     }
 }
-

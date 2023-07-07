@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct DetailDishView: View {
+    
     @EnvironmentObject private var coordinator: Coordinator
+    @StateObject var dishesViewModel = DishesViewModel()
     @StateObject var viewModel: DetailDishViewModel
+    @Binding var isPresented: Bool
     let imageSize: CGFloat = 200
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(Constants.Colors.black40)
-                .edgesIgnoringSafeArea(.all)
-            
             VStack(alignment: .leading, spacing: 5) {
                 ZStack(alignment: .center) {
                     RoundedRectangle(cornerRadius: 10)
@@ -36,9 +34,7 @@ struct DetailDishView: View {
                                 .frame(width: 40, height: 40)
                         }
                         Button {
-                            withoutAnimation {
-                                coordinator.dismissFullScreenCover()
-                            }
+                            isPresented = false
                         } label: {
                             Image(Constants.Image.cancelIcon)
                                 .padding(10)
@@ -81,14 +77,13 @@ struct DetailDishView: View {
             .background(.white, in: RoundedRectangle(cornerRadius: 15))
             .frame(width: 343, height: 446)
         }
-    }
 }
 
 struct DetailDishView_Previews: PreviewProvider {
     static var previews: some View {
+        @State var showPopup = true
         DetailDishView(viewModel:
-                        DetailDishViewModel(dish: Dish.example1()))
+                        DetailDishViewModel(dish: Dish.example1()),
+                       isPresented: $showPopup)
     }
 }
-
-

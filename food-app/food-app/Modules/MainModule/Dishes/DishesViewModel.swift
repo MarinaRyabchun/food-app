@@ -11,10 +11,11 @@ import SwiftUI
 class DishesViewModel: ObservableObject {
     
     @Published var dishes = [Dish]()
-    @Published var tags = ["Все меню", "С рыбой", "С рисом", "Салаты"]
+    @Published var selectedDish: Dish? = nil
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
-    @State var selectedCategory: String?
+    @Published var selectedCategory: String? = nil
+    @Published var tags = ["Все меню", "С рыбой", "С рисом", "Салаты"]
     
     let service: APIServiceProtocol
     
@@ -23,12 +24,16 @@ class DishesViewModel: ObservableObject {
         fetchDishes()
     }
     
+    func unselectDish() {
+        self.selectedDish = nil
+    }
+    
     func fetchDishes() {
         
         isLoading = true
         errorMessage = nil
         
-//      В URL мщжно будет добавить category, если API будет под каждую категорию.
+        //      В URL мщжно будет добавить category, если API будет под каждую категорию.
         let url = URL(string: "https://run.mocky.io/v3/aba7ecaa-0a70-453b-b62d-0e326c859b3b")
         service.fetch(Dishes.self, url: url) { [weak self] result in
             
@@ -42,12 +47,12 @@ class DishesViewModel: ObservableObject {
                 case .success(let dishes):
                     print("--- sucess with \(dishes.dishes.count)")
                     self?.dishes = dishes.dishes
-//                    self.addTagsFromDishes(dishes.dishes)
+                    //                    self.addTagsFromDishes(dishes.dishes)
                 }
             }
         }
     }
-//    метод для заполнения массива с тегами, если API будет под каждую категорию
+    //    метод для заполнения массива с тегами, если API будет под каждую категорию
     private func addTagsFromDishes(_ dishes: [Dish]) {
         for dish in dishes {
             if let dishTags = dish.tegs {
@@ -59,7 +64,4 @@ class DishesViewModel: ObservableObject {
             }
         }
     }
-
 }
-
-
