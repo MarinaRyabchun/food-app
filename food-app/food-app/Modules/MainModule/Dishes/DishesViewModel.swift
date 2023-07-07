@@ -30,18 +30,18 @@ class DishesViewModel: ObservableObject {
         
 //      В URL мщжно будет добавить category, если API будет под каждую категорию.
         let url = URL(string: "https://run.mocky.io/v3/aba7ecaa-0a70-453b-b62d-0e326c859b3b")
-        service.fetch(Dishes.self, url: url) { [unowned self] result in
+        service.fetch(Dishes.self, url: url) { [weak self] result in
             
             DispatchQueue.main.async {
                 
-                self.isLoading = false
+                self?.isLoading = false
                 switch result {
                 case .failure(let error):
-                    self.errorMessage = error.localizedDescription
+                    self?.errorMessage = error.localizedDescription
                     print(error)
                 case .success(let dishes):
                     print("--- sucess with \(dishes.dishes.count)")
-                    self.dishes = dishes.dishes
+                    self?.dishes = dishes.dishes
 //                    self.addTagsFromDishes(dishes.dishes)
                 }
             }

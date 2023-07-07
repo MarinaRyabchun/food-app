@@ -27,18 +27,18 @@ class CategoriesViewModel: ObservableObject {
         errorMessage = nil
         
         let url = URL(string: "https://run.mocky.io/v3/058729bd-1402-4578-88de-265481fd7d54")
-        service.fetch(Categories.self, url: url) { [unowned self] result in
+        service.fetch(Categories.self, url: url) { [weak self] result in
             
             DispatchQueue.main.async {
                 
-                self.isLoading = false
+                self?.isLoading = false
                 switch result {
                 case .failure(let error):
-                    self.errorMessage = error.localizedDescription
+                    self?.errorMessage = error.localizedDescription
                     print(error)
                 case .success(let categories):
                     print("--- sucess with \(categories.сategories.count)")
-                    self.categories = categories.сategories
+                    self?.categories = categories.сategories
                 }
             }
         }

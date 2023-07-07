@@ -8,42 +8,51 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State var tabSelection = 1
+    
+    @StateObject var coordinator: Coordinator
     
     var body: some View {
-        TabView(selection: $tabSelection) {
-            CategoriesView()
+        TabView(selection: $coordinator.tab) {
+            NavigationStack(path: $coordinator.path) {
+                coordinator.build(page: .categories)
+                    .navigationDestination(for: Page.self) { page in
+                        coordinator.build(page: page)
+                    }
+                    .fullScreenCover(item: $coordinator.fullScreenCover) { fullScreenCover in
+                        coordinator.build(fullScreenCover: fullScreenCover)
+                    }
+            }
                 .tabItem {
                     TabItemView(image: Constants.Image.mainTabIcon,
                                 title: "Главная")
                 }
-                .tag(0)
-            SearchView()
+                .tag(Page.categories)
+            coordinator.build(page: .basket)
                 .tabItem {
                     TabItemView(image: Constants.Image.searchTabIcon,
                                 title: "Поиск")
                 }
-                .tag(1)
-            BasketView(viewModel: BasketViewModel.shared)
+                .tag(Page.search)
+            coordinator.build(page: .basket)
                 .tabItem {
                     TabItemView(image: Constants.Image.basketTabIcon,
                                 title: "Корзина")
                 }
-                .tag(2)
-//            AccountView()
-            DishesView()
+                .tag(Page.basket)
+            coordinator.build(page: .account)
                 .tabItem {
                     TabItemView(image: Constants.Image.accountTabIcon,
                                 title: "Аккаунт")
                 }
-                .tag(3)
+                .tag(Page.account)
         }
         .tint(Constants.Colors.accent)
+        .environmentObject(coordinator)
     }
 }
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        TabBarView(coordinator: Coordinator())
     }
 }

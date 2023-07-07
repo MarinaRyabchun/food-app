@@ -14,14 +14,12 @@ struct BasketView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                ScrollView {
-                    List(viewModel.positions) { position in
-                            BasketRow(position: position)
-                    }
+            VStack{
+                ForEach(viewModel.positions) { position in
+                    BasketRow(position: position)
+                        .listRowSeparator(.hidden)
                 }
                 Spacer()
-                
                 Button("Оплатить \(viewModel.cost) ₽") {
                     
                 }
