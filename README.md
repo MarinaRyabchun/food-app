@@ -1,2 +1,43 @@
 # food-app
-Application for ordering food. View categories, list of dishes and basket. Used by SwiftUI, MVVM + Coordinator, Combine
+Мобильное приложения для заказа еды. SwiftUI, MVVM + Coordinator
+
+## Краткое описание:
+* Позволяет просматривать блюда по категориям и тегам
+* Позволяет добавить блюда в корзину, оплата не реализована
+* Запрашивает разрешение на показ геолокации устройства
+* Были использованы кастомные шрифты, иконки и цвета 
+* Язык программирования — Swift
+
+## Обзор:
+<p align="center">
+<img src="https://github.com/MarinaRyabchun/food-app/blob/main/Preview.gif" height="600"/></h1>
+
+## Технологии:
+
+* API:
+    - Для категорий ([API](https://yandex.ru/dev/id/doc/ru/](https://run.mocky.io/v3/058729bd-1402-4578-88de-265481fd7d54)))
+    - Для блюд ([API](https://yandex.ru/dev/id/doc/ru/](https://run.mocky.io/v3/aba7ecaa-0a70-453b-b62d-0e326c859b3b)))
+* Интерфейс:
+    - SwiftUI
+* Архитектура:
+    - MVVM+C
+
+## ToDo
+- [ ] Доработать измененение суммы в корзине
+- [ ] Добавить отображение описания возможных сетевых ошибок для пользователя
+- [ ] Добавить хранение данных
+- [ ] Написать Unit Tests
+
+## Требования
+* iOS 16.4+
+* Xcode 14.3+
+* Swift 5+
+
+## Установка
+* Скачайте репозиторий
+* Откройте проект в Xcode
+* Запустите проект на Симуляторе
+* При первом запуске разрешите или отклоните запрос на на использование геолокации
+
+## Автор
+Марина Рябчун ( marina.ryabchun1@gmail.com )
