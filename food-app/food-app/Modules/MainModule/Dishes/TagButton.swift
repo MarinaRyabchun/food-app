@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct TagButton: View {
     var title: String
     @Binding var selectedTag: String
@@ -26,6 +27,7 @@ struct TagButton: View {
         })
     }
 }
+
 struct TagButton_Previews: PreviewProvider {
     static var previews: some View {
         @State var selectedTag = ""

@@ -9,8 +9,6 @@ import Foundation
 
 class BasketViewModel: ObservableObject {
     
-    static let shared = BasketViewModel()
-    
     @Published var positions = [Position]()
     
     var cost: Int {

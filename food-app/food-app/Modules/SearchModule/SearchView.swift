@@ -17,6 +17,7 @@ struct SearchView: View {
         .searchable(text: $searchText, prompt: "Look for something")
     }
 }
+
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()

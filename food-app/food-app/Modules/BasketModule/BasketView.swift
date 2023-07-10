@@ -9,15 +9,13 @@ import SwiftUI
 
 struct BasketView: View {
     
-    @StateObject var viewModel: BasketViewModel
-    @State private var price = 0
+    @EnvironmentObject var viewModel: BasketViewModel
     
     var body: some View {
         NavigationStack {
             VStack{
-                ForEach(viewModel.positions) { position in
-                    BasketRow(position: position)
-                        .listRowSeparator(.hidden)
+                ForEach($viewModel.positions) { position in
+                    BasketRow(position: position, count: position.count)
                 }
                 Spacer()
                 Button("Оплатить \(viewModel.cost) ₽") {
@@ -47,6 +45,6 @@ struct BasketView: View {
 
 struct BasketView_Previews: PreviewProvider {
     static var previews: some View {
-        BasketView(viewModel: BasketViewModel.shared)
+        BasketView()
     }
 }

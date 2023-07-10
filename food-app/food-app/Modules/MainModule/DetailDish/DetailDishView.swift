@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailDishView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
+    @EnvironmentObject private var basketVM: BasketViewModel
     @StateObject var viewModel: DetailDishViewModel
     @Binding var isPresented: Bool
     let imageSize: CGFloat = 200
@@ -64,7 +65,7 @@ struct DetailDishView: View {
                     let position = Position(id: UUID().uuidString,
                                             count: 1,
                                             dish: viewModel.dish)
-                    BasketViewModel.shared.addPosition(position)
+                    basketVM.addPosition(position)
                 }
                 .frame(width: 311, height: 48)
                 .background(Constants.Colors.accent)

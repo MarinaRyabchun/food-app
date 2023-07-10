@@ -40,7 +40,8 @@ class Coordinator: ObservableObject {
         case .search:
             SearchView()
         case .basket:
-            BasketView(viewModel: BasketViewModel.shared)        case .account:
+            BasketView()
+        case .account:
             AccountView()
         case .dishes:
             DishesView(showPopup: false)

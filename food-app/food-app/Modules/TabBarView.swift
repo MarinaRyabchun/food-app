@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+
 struct TabBarView: View {
     
     @StateObject var coordinator: Coordinator
     @StateObject var dishesViewModel: DishesViewModel
+    @StateObject var basketViewModel: BasketViewModel
     
     var body: some View {
         TabView(selection: $coordinator.tab) {
@@ -46,10 +48,11 @@ struct TabBarView: View {
         .tint(Constants.Colors.accent)
         .environmentObject(coordinator)
         .environmentObject(dishesViewModel)
+        .environmentObject(basketViewModel)
     }
 }
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView(coordinator: Coordinator(), dishesViewModel: DishesViewModel())
+        TabBarView(coordinator: Coordinator(), dishesViewModel: DishesViewModel(), basketViewModel: BasketViewModel())
     }}
