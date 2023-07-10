@@ -18,9 +18,6 @@ enum Page: String, Identifiable {
 class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath()
-    @State var showPopup: Bool = false
-    
-    
     @Published var tab = Page.categories
     
     func push(_ page: Page) {
@@ -46,7 +43,7 @@ class Coordinator: ObservableObject {
             BasketView(viewModel: BasketViewModel.shared)        case .account:
             AccountView()
         case .dishes:
-            DishesView(viewModel: DishesViewModel(service: APIService()), showPopup: showPopup)
+            DishesView(showPopup: false)
         }
     }
 }

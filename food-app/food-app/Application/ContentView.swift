@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabBarView(coordinator: Coordinator())
+        TabBarView(coordinator: Coordinator(), dishesViewModel: DishesViewModel())
     }
 }
 

@@ -9,11 +9,10 @@ import SwiftUI
 struct TabBarView: View {
     
     @StateObject var coordinator: Coordinator
+    @StateObject var dishesViewModel: DishesViewModel
     
     var body: some View {
         TabView(selection: $coordinator.tab) {
-
-
             NavigationStack(path: $coordinator.path) {
                 coordinator.build(page: .categories)
                     .navigationDestination(for: Page.self) { page in
@@ -46,9 +45,11 @@ struct TabBarView: View {
         }
         .tint(Constants.Colors.accent)
         .environmentObject(coordinator)
+        .environmentObject(dishesViewModel)
     }
 }
+
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView(coordinator: Coordinator())
+        TabBarView(coordinator: Coordinator(), dishesViewModel: DishesViewModel())
     }}

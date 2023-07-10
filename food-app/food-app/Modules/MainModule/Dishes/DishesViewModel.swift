@@ -17,16 +17,7 @@ class DishesViewModel: ObservableObject {
     @Published var selectedCategory: String? = nil
     @Published var tags = ["Все меню", "С рыбой", "С рисом", "Салаты"]
     
-    let service: APIServiceProtocol
-    
-    init(service: APIServiceProtocol = APIService()) {
-        self.service = service
-        fetchDishes()
-    }
-    
-    func unselectDish() {
-        self.selectedDish = nil
-    }
+    let service: APIServiceProtocol = APIService()
     
     func fetchDishes() {
         

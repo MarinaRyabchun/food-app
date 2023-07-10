@@ -10,7 +10,6 @@ import SwiftUI
 struct DetailDishView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
-    @StateObject var dishesViewModel = DishesViewModel()
     @StateObject var viewModel: DetailDishViewModel
     @Binding var isPresented: Bool
     let imageSize: CGFloat = 200

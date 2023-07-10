@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DishesView: View {
     @EnvironmentObject private var coordinator: Coordinator
-    @StateObject var viewModel: DishesViewModel
+    @EnvironmentObject var viewModel: DishesViewModel
     @State var selectedTag = ""
     @State var showPopup: Bool
     
@@ -84,6 +84,6 @@ struct DishesView: View {
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
      @State var showPopup = false
-        DishesView(viewModel: DishesViewModel(service: APIService()), showPopup: showPopup)
+        DishesView(showPopup: showPopup)
     }
 }

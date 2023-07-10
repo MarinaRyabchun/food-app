@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryRow: View {
     @EnvironmentObject private var coordinator: Coordinator
-    @StateObject var dishesViewModel = DishesViewModel()
+    @EnvironmentObject private var dishesViewModel: DishesViewModel
     
     var category: Category
     let imageWidth: CGFloat = 343
